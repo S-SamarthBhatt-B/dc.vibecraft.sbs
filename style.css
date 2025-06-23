@@ -8,6 +8,7 @@ body {
 }
 
 /* Navbar */
+/* Navbar */
 .navbar {
   position: fixed;
   top: 0;
@@ -17,10 +18,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px;
-  background-color: #2E2C4A;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 8px 16px;
+  background: rgba(46, 44, 74, 0.4); /* Slight transparency */
+  backdrop-filter: blur(12px); /* Glass effect */
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  border-bottom: 2px solid rgba(0, 255, 255, 0.5); /* Soft aqua line */
+  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.15); /* Aqua glow */
 }
+
+/* Rest of your styles remain unchanged */
 
 .logo-container {
   display: flex;
@@ -31,8 +37,8 @@ body {
 .logo {
   width: 40px;
   height: 40px;
-  border-radius: 50%; /* Makes it a perfect circle */
-  object-fit: cover;  /* Ensures the image fills the circle */
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .server-name {
@@ -58,8 +64,6 @@ body {
   text-decoration: underline;
 }
 
-/* Base styling already present */
-
 .menu-toggle {
   display: none;
   font-size: 1.8rem;
@@ -76,14 +80,17 @@ body {
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: #2E2C4A;
+    background: rgba(46, 44, 74, 0.85);
+    backdrop-filter: blur(8px);
     position: absolute;
-    top: 60px; /* Adjust based on navbar height */
+    top: 60px;
     left: 0;
     right: 0;
     text-align: center;
     padding: 1rem 0;
     z-index: 999;
+    border-top: 1px solid rgba(0, 255, 255, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 255, 255, 0.1);
   }
 
   .nav-links.show {
@@ -94,7 +101,6 @@ body {
     padding: 0.5rem 0;
   }
 }
-
 
 /* Welcome Section */
 .welcome {
